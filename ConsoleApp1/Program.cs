@@ -41,6 +41,9 @@ namespace ConsoleApp1
                 case 10:
                     ejercicio10();
                     break;
+                case 11:
+                    ejercicio11();
+                    break;
 			}
 
 		}
@@ -344,6 +347,81 @@ namespace ConsoleApp1
 
             Console.WriteLine("Nota maxima: " + notaMaxima + " - " + registroNotaMaxima);
             Console.WriteLine("Nota minima: " + notaMinima + " - " + registroNotaMinima);
+
+            Console.WriteLine("Press any key");
+            Console.Read();
+        }
+
+        private static void ejercicio11()
+        {
+            String numeroFactura = "", facturaMaxima = "", facturaMinima = "";
+            double importe = 0, importeTotal = 0, importeMaximo = 0, importeMinimo = 0;
+            int contador = 0;
+            String continuar = "S";
+
+            do
+            {
+                numeroFactura = "";
+                importe = 0;
+                do
+                {
+                    Console.WriteLine("Ingrese numero de factura:");
+                    numeroFactura = Console.ReadLine();
+                    if (numeroFactura.Equals(""))
+                    {
+                        Console.WriteLine("Debe ingresar un valor");
+                    }
+                } while (numeroFactura.Equals(""));
+
+                do
+                {
+                    Console.WriteLine("Ingrese una importe positivo para la factura");
+                    importe = Convert.ToDouble(Console.ReadLine());
+                    if (importe <= 0)
+                    {
+                        Console.WriteLine("El importe debe ser positivo");
+                    }
+                } while (importe <= 0);
+
+                if (contador == 0)
+                {
+                    facturaMaxima = numeroFactura;
+                    facturaMinima = numeroFactura;
+                    importeMaximo = importe;
+                    importeMinimo = importe;
+                } else
+                {
+                    if (importe < importeMinimo)
+                    {
+                        facturaMinima = numeroFactura;
+                        importeMinimo = importe;
+                    }
+
+                    if (importe > importeMaximo)
+                    {
+                        facturaMaxima = numeroFactura;
+                        importeMaximo = importe;
+                    }
+                }
+                contador = contador + 1;
+                importeTotal = importeTotal + importe;
+
+                do
+                {
+                    Console.WriteLine("Desea continuar? Ingrese S o N");
+                    continuar = Console.ReadLine();
+                    if (!continuar.Equals("S") && !continuar.Equals("N"))
+                    {
+                        Console.WriteLine("Ingrese S o N");
+                    }
+                } while (!continuar.Equals("S") && !continuar.Equals("N"));
+            } while (continuar.Equals("S"));
+
+            Console.WriteLine("Importe total: " + importeTotal);
+            Console.WriteLine("Cantidad de facturas: " + contador);
+            Console.WriteLine("Importe promedio: " + (importeTotal / contador));
+            Console.WriteLine("Importe minimo: " + importeMinimo + " - " + facturaMinima);
+            Console.WriteLine("Importe maxima: " + importeMaximo + " - " + facturaMaxima);
 
             Console.WriteLine("Press any key");
             Console.Read();
