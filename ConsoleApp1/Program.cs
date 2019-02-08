@@ -23,6 +23,9 @@ namespace ConsoleApp1
 				case 4:
 					ejercicio4();
 					break;
+                case 5:
+                    ejercicio5();
+                    break;
 			}
 
 		}
@@ -147,10 +150,23 @@ namespace ConsoleApp1
 		{
 			String variable1;
 			String variable2;
+            String buffer;
 
+            Console.WriteLine("Ingrese valor para variable1");
+            variable1 = Console.ReadLine();
 
+            Console.WriteLine("Ingrese valor para variable2");
+            variable2 = Console.ReadLine();
 
-			Console.WriteLine("Press any key");
+            Console.WriteLine("variable1=" + variable1 + " - variable2=" + variable2);
+
+            buffer = variable1;
+            variable1 = variable2;
+            variable2 = buffer;
+
+            Console.WriteLine("variable1=" + variable1 + " - variable2=" + variable2);
+
+            Console.WriteLine("Press any key");
 			Console.Read();
 		}
 	}
