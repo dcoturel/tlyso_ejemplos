@@ -35,6 +35,9 @@ namespace ConsoleApp1
                 case 8:
                     ejercicio8();
                     break;
+                case 9:
+                    ejercicio9();
+                    break;
 			}
 
 		}
@@ -236,6 +239,52 @@ namespace ConsoleApp1
             Console.WriteLine("Press any key");
             Console.Read();
 
+        }
+
+        private static void ejercicio9()
+        {
+            String nombre = "";
+            double jornalPorHora = 0;
+            double horasTrabajadas = 0;
+
+            do
+            {
+                Console.WriteLine("Ingrese el nombre del empleado");
+                nombre = Console.ReadLine();
+                if (nombre.Equals(""))
+                {
+                    Console.WriteLine("El nombre no puede quedar vacio");
+                }
+            } while (nombre.Equals(""));
+
+            do
+            {
+                Console.WriteLine("Ingrese el jornal por hora");
+                jornalPorHora = Convert.ToDouble(Console.ReadLine());
+                if (jornalPorHora==0)
+                {
+                    Console.WriteLine("Ingrese un valor mayor a 0");
+                }
+            } while (jornalPorHora == 0);
+
+            do
+            {
+                Console.WriteLine("Ingrese las horas trabajadas");
+                horasTrabajadas = Convert.ToDouble(Console.ReadLine());
+                if (horasTrabajadas == 0)
+                {
+                    Console.WriteLine("Ingrese un valor mayor a 0");
+                }
+            } while (horasTrabajadas == 0);
+
+            Console.WriteLine("Empleado: " + nombre);
+            Console.WriteLine("Sueldo bruto: " + jornalPorHora * horasTrabajadas);
+            Console.WriteLine("Retencion jubilacion: " + (jornalPorHora * horasTrabajadas) * 0.11);
+            Console.WriteLine("Retencion otros conceptos: " + (jornalPorHora * horasTrabajadas) * 0.07);
+            Console.WriteLine("Total retenciones: " + (jornalPorHora * horasTrabajadas) * 0.18);
+            Console.WriteLine("Sueldo neto a cobrar: " + ((jornalPorHora * horasTrabajadas) - (jornalPorHora * horasTrabajadas * 0.18)));
+            Console.WriteLine("Press any key");
+            Console.Read();
         }
     }
 }
