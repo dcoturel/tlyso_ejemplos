@@ -32,6 +32,9 @@ namespace ConsoleApp1
                 case 7:
                     ejercicio7();
                     break;
+                case 8:
+                    ejercicio8();
+                    break;
 			}
 
 		}
@@ -211,6 +214,28 @@ namespace ConsoleApp1
 
             Console.WriteLine("Press any key");
             Console.Read();
+        }
+
+        private static void ejercicio8()
+        {
+            double total = 0;
+            double importe;
+            String seguir = "S";
+
+            do
+            {
+                Console.WriteLine("Ingrese el importe de la factura:");
+                importe = Convert.ToDouble(Console.ReadLine());
+                total = total + importe;
+                Console.WriteLine("Desea continuar la carga de facturas? Ingrese S para indicar que si");
+                seguir = Console.ReadLine();
+            } while (seguir.Equals("S"));
+
+
+            Console.WriteLine("El total de facturas ingresadas es " + total);
+            Console.WriteLine("Press any key");
+            Console.Read();
+
         }
     }
 }
