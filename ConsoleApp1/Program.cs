@@ -26,6 +26,9 @@ namespace ConsoleApp1
                 case 5:
                     ejercicio5();
                     break;
+                case 6:
+                    ejercicio6();
+                    break;
 			}
 
 		}
@@ -169,5 +172,32 @@ namespace ConsoleApp1
             Console.WriteLine("Press any key");
 			Console.Read();
 		}
-	}
+
+        private static void ejercicio6() {
+            int lado1;
+            int lado2;
+            int lado3;
+
+            Console.WriteLine("Ingrese lado 1");
+            lado1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ingrese lado 2");
+            lado2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Ingrese lado 3");
+            lado3 = Convert.ToInt32(Console.ReadLine());
+
+            if (lado1 == lado2 && lado2 == lado3) {
+                Console.WriteLine("El triangulo ingresado es equilatero");
+            } else if ((lado1 == lado2 && lado1 != lado3) || (lado1 == lado3 && lado1 != lado2) || (lado2 == lado3 && lado1 != lado2)) {
+                Console.WriteLine("El triangulo es isosceles");
+            } else {
+                Console.WriteLine("El triangulo es escaleno");
+            }
+
+            Console.WriteLine("Press any key");
+            Console.Read();
+
+        }
+    }
 }
