@@ -38,6 +38,9 @@ namespace ConsoleApp1
                 case 9:
                     ejercicio9();
                     break;
+                case 10:
+                    ejercicio10();
+                    break;
 			}
 
 		}
@@ -283,6 +286,65 @@ namespace ConsoleApp1
             Console.WriteLine("Retencion otros conceptos: " + (jornalPorHora * horasTrabajadas) * 0.07);
             Console.WriteLine("Total retenciones: " + (jornalPorHora * horasTrabajadas) * 0.18);
             Console.WriteLine("Sueldo neto a cobrar: " + ((jornalPorHora * horasTrabajadas) - (jornalPorHora * horasTrabajadas * 0.18)));
+            Console.WriteLine("Press any key");
+            Console.Read();
+        }
+
+        private static void ejercicio10()
+        {
+            String registro, registroNotaMaxima = "", registroNotaMinima = "", continuar = "";
+            int nota = -1, notaMaxima = -1, notaMinima = 11;
+
+            do
+            {
+                registro = "";
+                nota = -1;
+                do
+                {
+                    Console.WriteLine("Ingrese numero de registro:");
+                    registro = Console.ReadLine();
+                    if (registro.Equals(""))
+                    {
+                        Console.WriteLine("Debe ingresar un valor");
+                    }
+                } while (registro.Equals(""));
+
+                do
+                {
+                    Console.WriteLine("Ingrese una nota entre 0 y 10");
+                    nota = Convert.ToInt32(Console.ReadLine());
+                    if (nota < 0 || nota > 10)
+                    {
+                        Console.WriteLine("La nota debe estar entre 0 y 10");
+                    }
+                } while (nota < 0 || nota > 10);
+
+                if (nota < notaMinima)
+                {
+                    notaMinima = nota;
+                    registroNotaMinima = registro;
+                }
+
+                if (nota > notaMaxima)
+                {
+                    notaMaxima = nota;
+                    registroNotaMaxima = registro;
+                }
+
+                do
+                {
+                    Console.WriteLine("Desea continuar? Ingrese S o N");
+                    continuar = Console.ReadLine();
+                    if (!continuar.Equals("S") && !continuar.Equals("N"))
+                    {
+                        Console.WriteLine("Ingrese S o N");
+                    }
+                } while (!continuar.Equals("S") && !continuar.Equals("N"));
+            } while (continuar.Equals("S"));
+
+            Console.WriteLine("Nota maxima: " + notaMaxima + " - " + registroNotaMaxima);
+            Console.WriteLine("Nota minima: " + notaMinima + " - " + registroNotaMinima);
+
             Console.WriteLine("Press any key");
             Console.Read();
         }
