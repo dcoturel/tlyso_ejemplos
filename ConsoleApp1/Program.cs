@@ -29,6 +29,9 @@ namespace ConsoleApp1
                 case 6:
                     ejercicio6();
                     break;
+                case 7:
+                    ejercicio7();
+                    break;
 			}
 
 		}
@@ -198,6 +201,16 @@ namespace ConsoleApp1
             Console.WriteLine("Press any key");
             Console.Read();
 
+        }
+
+        private static void ejercicio7()
+        {
+            for (int i = 1; i <= 10; i++) {
+                Console.WriteLine("10 x " + i + " = " + i * 10);
+            }
+
+            Console.WriteLine("Press any key");
+            Console.Read();
         }
     }
 }
