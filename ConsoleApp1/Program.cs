@@ -2,27 +2,27 @@
 
 namespace ConsoleApp1
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			int ejercicio = 0;
-			Console.WriteLine("Ingrese el numero de ejercicio a ejecutar");
-			ejercicio = Convert.ToInt32(Console.ReadLine());
-			switch (ejercicio)
-			{
-				case 1:
-					ejercicio1();
-					break;
-				case 2:
-					ejercicio2();
-					break;
-				case 3:
-					ejercicio3();
-					break;
-				case 4:
-					ejercicio4();
-					break;
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int ejercicio = 0;
+            Console.WriteLine("Ingrese el numero de ejercicio a ejecutar");
+            ejercicio = Convert.ToInt32(Console.ReadLine());
+            switch (ejercicio)
+            {
+                case 1:
+                    ejercicio1();
+                    break;
+                case 2:
+                    ejercicio2();
+                    break;
+                case 3:
+                    ejercicio3();
+                    break;
+                case 4:
+                    ejercicio4();
+                    break;
                 case 5:
                     ejercicio5();
                     break;
@@ -44,130 +44,133 @@ namespace ConsoleApp1
                 case 11:
                     ejercicio11();
                     break;
-			}
+                case 12:
+                    ejercicio12();
+                    break;
+            }
 
-		}
+        }
 
-		private static void ejercicio1()
-		{
-			String nombre;
-			String direccion;
-			Console.WriteLine("Ingrese por favor su nombre:");
-			nombre = Console.ReadLine();
-			Console.WriteLine("Ingrese por favor su dirección:");
-			direccion = Console.ReadLine();
-			Console.WriteLine("Usted se llama " + nombre + " y vive en " + direccion);
-			Console.WriteLine("Press any key");
-			Console.Read();
-		}
+        private static void ejercicio1()
+        {
+            String nombre;
+            String direccion;
+            Console.WriteLine("Ingrese por favor su nombre:");
+            nombre = Console.ReadLine();
+            Console.WriteLine("Ingrese por favor su dirección:");
+            direccion = Console.ReadLine();
+            Console.WriteLine("Usted se llama " + nombre + " y vive en " + direccion);
+            Console.WriteLine("Press any key");
+            Console.Read();
+        }
 
-		private static void ejercicio2()
-		{
-			String nombre = "";
-			String direccion = "";
-			Console.WriteLine("Ingrese por favor su nombre:");
-			while (nombre.Length == 0)
-			{
-				nombre = Console.ReadLine();
-				if (nombre.Equals(""))
-				{
-					Console.WriteLine("Debe ingresar un valor para el nombre");
-				}
-			}
+        private static void ejercicio2()
+        {
+            String nombre = "";
+            String direccion = "";
+            Console.WriteLine("Ingrese por favor su nombre:");
+            while (nombre.Length == 0)
+            {
+                nombre = Console.ReadLine();
+                if (nombre.Equals(""))
+                {
+                    Console.WriteLine("Debe ingresar un valor para el nombre");
+                }
+            }
 
-			Console.WriteLine("Ingrese por favor su dirección:");
-			while (direccion.Length == 0)
-			{
-				direccion = Console.ReadLine();
-				if (direccion.Equals(""))
-				{
-					Console.WriteLine("Debe ingresar un valor para la direccion");
-				}
-			}
+            Console.WriteLine("Ingrese por favor su dirección:");
+            while (direccion.Length == 0)
+            {
+                direccion = Console.ReadLine();
+                if (direccion.Equals(""))
+                {
+                    Console.WriteLine("Debe ingresar un valor para la direccion");
+                }
+            }
 
-			Console.WriteLine("Usted se llama " + nombre + " y vive en " + direccion);
-			Console.WriteLine("Press any key");
-			Console.Read();
-		}
+            Console.WriteLine("Usted se llama " + nombre + " y vive en " + direccion);
+            Console.WriteLine("Press any key");
+            Console.Read();
+        }
 
-		private static void ejercicio3()
-		{
-			double numero1;
-			double numero2;
-			double promedio;
-			Console.WriteLine("Ingrese un numero entre 0 y 10");
-			do
-			{
-				numero1 = Convert.ToDouble(Console.ReadLine());
-				if (numero1 < 0 || numero1 > 10)
-				{
-					Console.WriteLine("Dije entre 0 y 10...");
-				}
-			} while (numero1 < 0 || numero1 > 10);
+        private static void ejercicio3()
+        {
+            double numero1;
+            double numero2;
+            double promedio;
+            Console.WriteLine("Ingrese un numero entre 0 y 10");
+            do
+            {
+                numero1 = Convert.ToDouble(Console.ReadLine());
+                if (numero1 < 0 || numero1 > 10)
+                {
+                    Console.WriteLine("Dije entre 0 y 10...");
+                }
+            } while (numero1 < 0 || numero1 > 10);
 
-			Console.WriteLine("Ingrese otro numero entre 0 y 10");
-			do
-			{
-				numero2 = Convert.ToDouble(Console.ReadLine());
-				if (numero2 < 0 || numero2 > 10)
-				{
-					Console.WriteLine("Dije entre 0 y 10...");
-				}
-			} while (numero2 < 0 || numero2 > 10);
+            Console.WriteLine("Ingrese otro numero entre 0 y 10");
+            do
+            {
+                numero2 = Convert.ToDouble(Console.ReadLine());
+                if (numero2 < 0 || numero2 > 10)
+                {
+                    Console.WriteLine("Dije entre 0 y 10...");
+                }
+            } while (numero2 < 0 || numero2 > 10);
 
-			promedio = (numero1 + numero2) / 2;
+            promedio = (numero1 + numero2) / 2;
 
-			Console.WriteLine("El promedio entre los numeros ingresados es " + promedio);
-			Console.WriteLine("Press any key");
-			Console.Read();
-		}
+            Console.WriteLine("El promedio entre los numeros ingresados es " + promedio);
+            Console.WriteLine("Press any key");
+            Console.Read();
+        }
 
-		private static void ejercicio4()
-		{
-			int horas;
-			int minutos;
-			int segundos;
+        private static void ejercicio4()
+        {
+            int horas;
+            int minutos;
+            int segundos;
 
-			Console.WriteLine("Ingrese el valor para las horas");
-			do
-			{
-				horas = Convert.ToInt32(Console.ReadLine());
-				if (horas < 0 || horas > 23)
-				{
-					Console.WriteLine("Deberia estar entre 0 y 23...");
-				}
-			} while (horas < 0 || horas > 23);
+            Console.WriteLine("Ingrese el valor para las horas");
+            do
+            {
+                horas = Convert.ToInt32(Console.ReadLine());
+                if (horas < 0 || horas > 23)
+                {
+                    Console.WriteLine("Deberia estar entre 0 y 23...");
+                }
+            } while (horas < 0 || horas > 23);
 
-			Console.WriteLine("Ingrese el valor para los minutos");
-			do
-			{
-				minutos = Convert.ToInt32(Console.ReadLine());
-				if (minutos < 0 || minutos > 59)
-				{
-					Console.WriteLine("Deberia estar entre 0 y 59...");
-				}
-			} while (minutos < 0 || minutos > 59);
+            Console.WriteLine("Ingrese el valor para los minutos");
+            do
+            {
+                minutos = Convert.ToInt32(Console.ReadLine());
+                if (minutos < 0 || minutos > 59)
+                {
+                    Console.WriteLine("Deberia estar entre 0 y 59...");
+                }
+            } while (minutos < 0 || minutos > 59);
 
-			Console.WriteLine("Ingrese el valor para los segundos");
-			do
-			{
-				segundos = Convert.ToInt32(Console.ReadLine());
-				if (segundos < 0 || segundos > 59)
-				{
-					Console.WriteLine("Deberia estar entre 0 y 59...");
-				}
-			} while (segundos < 0 || segundos > 59);
+            Console.WriteLine("Ingrese el valor para los segundos");
+            do
+            {
+                segundos = Convert.ToInt32(Console.ReadLine());
+                if (segundos < 0 || segundos > 59)
+                {
+                    Console.WriteLine("Deberia estar entre 0 y 59...");
+                }
+            } while (segundos < 0 || segundos > 59);
 
-			Console.WriteLine("La cantidad total de segundos es " + (horas * 60 * 60 + minutos * 60 + segundos) + "");
+            Console.WriteLine("La cantidad total de segundos es " + (horas * 60 * 60 + minutos * 60 + segundos) + "");
 
-			Console.WriteLine("Press any key");
-			Console.Read();
-		}
+            Console.WriteLine("Press any key");
+            Console.Read();
+        }
 
-		private static void ejercicio5()
-		{
-			String variable1;
-			String variable2;
+        private static void ejercicio5()
+        {
+            String variable1;
+            String variable2;
             String buffer;
 
             Console.WriteLine("Ingrese valor para variable1");
@@ -185,10 +188,11 @@ namespace ConsoleApp1
             Console.WriteLine("variable1=" + variable1 + " - variable2=" + variable2);
 
             Console.WriteLine("Press any key");
-			Console.Read();
-		}
+            Console.Read();
+        }
 
-        private static void ejercicio6() {
+        private static void ejercicio6()
+        {
             int lado1;
             int lado2;
             int lado3;
@@ -202,11 +206,16 @@ namespace ConsoleApp1
             Console.WriteLine("Ingrese lado 3");
             lado3 = Convert.ToInt32(Console.ReadLine());
 
-            if (lado1 == lado2 && lado2 == lado3) {
+            if (lado1 == lado2 && lado2 == lado3)
+            {
                 Console.WriteLine("El triangulo ingresado es equilatero");
-            } else if ((lado1 == lado2 && lado1 != lado3) || (lado1 == lado3 && lado1 != lado2) || (lado2 == lado3 && lado1 != lado2)) {
+            }
+            else if ((lado1 == lado2 && lado1 != lado3) || (lado1 == lado3 && lado1 != lado2) || (lado2 == lado3 && lado1 != lado2))
+            {
                 Console.WriteLine("El triangulo es isosceles");
-            } else {
+            }
+            else
+            {
                 Console.WriteLine("El triangulo es escaleno");
             }
 
@@ -217,7 +226,8 @@ namespace ConsoleApp1
 
         private static void ejercicio7()
         {
-            for (int i = 1; i <= 10; i++) {
+            for (int i = 1; i <= 10; i++)
+            {
                 Console.WriteLine("10 x " + i + " = " + i * 10);
             }
 
@@ -267,7 +277,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Ingrese el jornal por hora");
                 jornalPorHora = Convert.ToDouble(Console.ReadLine());
-                if (jornalPorHora==0)
+                if (jornalPorHora == 0)
                 {
                     Console.WriteLine("Ingrese un valor mayor a 0");
                 }
@@ -389,7 +399,8 @@ namespace ConsoleApp1
                     facturaMinima = numeroFactura;
                     importeMaximo = importe;
                     importeMinimo = importe;
-                } else
+                }
+                else
                 {
                     if (importe < importeMinimo)
                     {
@@ -425,6 +436,159 @@ namespace ConsoleApp1
 
             Console.WriteLine("Press any key");
             Console.Read();
+        }
+
+
+
+        private static void ejercicio12()
+        {
+            const double kdTasaIva = 0.21;
+            const int kiIndirectos = 100000;
+
+            String codigoArticulo = "", articuloMasCaro = "", articuloMasBarato = "", articuloMasRentable = "";
+            String nombreArticulo = "", nombreArticuloMasCaro = "", nombreArticuloMasBarato = "", nombreArticuloMasRentable = "";
+            double costoMateriaPrima = 0, cantidadGramos = 0, porcentajeIndirectos = 0, porcentajeRentabilidad = 0;
+            double costo = 0, precio = 0, rentabilidad = 0;
+            double precioMinimo = 0, precioMaximo = 0, rentabilidadMaxima = 0;
+            String continuar = "S";
+            int contador = 0;
+
+            do
+            {
+                codigoArticulo = "";
+                nombreArticulo = "";
+                costoMateriaPrima = 0;
+                cantidadGramos = 0;
+                porcentajeIndirectos = 0;
+                porcentajeRentabilidad = 0;
+
+                do
+                {
+                    Console.WriteLine("Ingrese codigo de articulo:");
+                    codigoArticulo = Console.ReadLine();
+                    if (codigoArticulo.Equals(""))
+                    {
+                        Console.WriteLine("Debe ingresar un valor");
+                    }
+                } while (codigoArticulo.Equals(""));
+
+                do
+                {
+                    Console.WriteLine("Ingrese nombre de articulo:");
+                    nombreArticulo = Console.ReadLine();
+                    if (nombreArticulo.Equals(""))
+                    {
+                        Console.WriteLine("Debe ingresar un valor");
+                    }
+                } while (nombreArticulo.Equals(""));
+
+
+                do
+                {
+                    Console.WriteLine("Ingrese un importe positivo para el costo de materia prima");
+                    costoMateriaPrima = Convert.ToDouble(Console.ReadLine());
+                    if (costoMateriaPrima <= 0)
+                    {
+                        Console.WriteLine("El importe debe ser positivo");
+                    }
+                } while (costoMateriaPrima <= 0);
+
+                do
+                {
+                    Console.WriteLine("Ingrese un valor positivo para la cantidad de gramos");
+                    cantidadGramos = Convert.ToDouble(Console.ReadLine());
+                    if (cantidadGramos <= 0)
+                    {
+                        Console.WriteLine("La cantidad debe ser positiva");
+                    }
+                } while (cantidadGramos <= 0);
+
+                do
+                {
+                    Console.WriteLine("Ingrese un valor para el porcentaje de indirectos");
+                    porcentajeIndirectos = Convert.ToDouble(Console.ReadLine());
+                    if (porcentajeIndirectos <= 0 || porcentajeIndirectos > 100)
+                    {
+                        Console.WriteLine("El valor debe ser positivo y estar entre 0 y 100");
+                    }
+                } while (porcentajeIndirectos <= 0 || porcentajeIndirectos > 100);
+
+                do
+                {
+                    Console.WriteLine("Ingrese un valor para el porcentaje de rentabilidad");
+                    porcentajeRentabilidad = Convert.ToDouble(Console.ReadLine());
+                    if (porcentajeRentabilidad <= 0 || porcentajeRentabilidad > 100)
+                    {
+                        Console.WriteLine("El valor debe ser positivo y estar entre 0 y 100");
+                    }
+                } while (porcentajeRentabilidad <= 0 || porcentajeRentabilidad > 100);
+
+                costo = (costoMateriaPrima * cantidadGramos) + (kiIndirectos * porcentajeIndirectos / 100);
+                precio = costo * ((porcentajeRentabilidad / 100) + 1) * (1 + kdTasaIva);
+                rentabilidad = precio - costo;
+
+                if (contador == 0)
+                {
+                    precioMaximo = precio;
+                    nombreArticuloMasCaro = nombreArticulo;
+                    articuloMasCaro = codigoArticulo;
+
+                    precioMinimo = precio;
+                    nombreArticuloMasBarato = nombreArticulo;
+                    articuloMasBarato = codigoArticulo;
+
+                    rentabilidadMaxima = rentabilidad;
+                    nombreArticuloMasRentable = nombreArticulo;
+                    articuloMasRentable = codigoArticulo;
+                }
+                else
+                {
+                    if (precio > precioMaximo)
+                    {
+                        precioMaximo = precio;
+                        nombreArticuloMasCaro = nombreArticulo;
+                        articuloMasCaro = codigoArticulo;
+                    }
+                    if (precio < precioMinimo)
+                    {
+                        precioMinimo = precio;
+                        nombreArticuloMasBarato = nombreArticulo;
+                        articuloMasBarato = codigoArticulo;
+                    }
+                    if (rentabilidad > rentabilidadMaxima)
+                    {
+                        rentabilidadMaxima = rentabilidad;
+                        nombreArticuloMasRentable = nombreArticulo;
+                        articuloMasRentable = codigoArticulo;
+                    }
+                }
+
+
+                do
+                {
+                    Console.WriteLine("Desea continuar? Ingrese S o N");
+                    continuar = Console.ReadLine();
+                    if (!continuar.Equals("S") && !continuar.Equals("N"))
+                    {
+                        Console.WriteLine("Ingrese S o N");
+                    }
+                } while (!continuar.Equals("S") && !continuar.Equals("N"));
+
+                contador = contador + 1;
+
+            } while (continuar.Equals("S"));
+
+            Console.WriteLine("Articulo mas caro: " + articuloMasCaro + " - " + nombreArticuloMasCaro);
+            Console.WriteLine("Precio: " + precioMaximo);
+            Console.WriteLine("Articulo mas barato: " + articuloMasBarato + " - " + nombreArticuloMasBarato);
+            Console.WriteLine("Precio: " + precioMinimo);
+            Console.WriteLine("Articulo mas rentable: " + articuloMasRentable + " - " + nombreArticuloMasRentable);
+
+
+
+            Console.WriteLine("Press any key");
+            Console.Read();
+
         }
     }
 }
