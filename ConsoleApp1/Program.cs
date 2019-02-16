@@ -50,6 +50,9 @@ namespace ConsoleApp1
                 case 13:
                     ejercicio13();
                     break;
+                case 14:
+                    ejercicio14();
+                    break;
             }
 
         }
@@ -75,7 +78,7 @@ namespace ConsoleApp1
             while (nombre.Length == 0)
             {
                 nombre = Console.ReadLine();
-                if ( nombre.Equals(""))
+                if (nombre.Equals(""))
                 {
                     Console.WriteLine("Debe ingresar un valor para el nombre");
                 }
@@ -85,7 +88,7 @@ namespace ConsoleApp1
             while (direccion.Length == 0)
             {
                 direccion = Console.ReadLine();
-                if ( direccion.Equals(""))
+                if (direccion.Equals(""))
                 {
                     Console.WriteLine("Debe ingresar un valor para la direccion");
                 }
@@ -105,7 +108,7 @@ namespace ConsoleApp1
             do
             {
                 numero1 = Convert.ToDouble(Console.ReadLine());
-                if ( numero1 < 0 || numero1 > 10)
+                if (numero1 < 0 || numero1 > 10)
                 {
                     Console.WriteLine("Dije entre 0 y 10...");
                 }
@@ -115,7 +118,7 @@ namespace ConsoleApp1
             do
             {
                 numero2 = Convert.ToDouble(Console.ReadLine());
-                if ( numero2 < 0 || numero2 > 10)
+                if (numero2 < 0 || numero2 > 10)
                 {
                     Console.WriteLine("Dije entre 0 y 10...");
                 }
@@ -138,7 +141,7 @@ namespace ConsoleApp1
             do
             {
                 horas = Convert.ToInt32(Console.ReadLine());
-                if ( horas < 0 || horas > 23)
+                if (horas < 0 || horas > 23)
                 {
                     Console.WriteLine("Deberia estar entre 0 y 23...");
                 }
@@ -148,7 +151,7 @@ namespace ConsoleApp1
             do
             {
                 minutos = Convert.ToInt32(Console.ReadLine());
-                if ( minutos < 0 || minutos > 59)
+                if (minutos < 0 || minutos > 59)
                 {
                     Console.WriteLine("Deberia estar entre 0 y 59...");
                 }
@@ -158,7 +161,7 @@ namespace ConsoleApp1
             do
             {
                 segundos = Convert.ToInt32(Console.ReadLine());
-                if ( segundos < 0 || segundos > 59)
+                if (segundos < 0 || segundos > 59)
                 {
                     Console.WriteLine("Deberia estar entre 0 y 59...");
                 }
@@ -209,11 +212,11 @@ namespace ConsoleApp1
             Console.WriteLine("Ingrese lado 3");
             lado3 = Convert.ToInt32(Console.ReadLine());
 
-            if ( lado1 == lado2 && lado2 == lado3)
+            if (lado1 == lado2 && lado2 == lado3)
             {
                 Console.WriteLine("El triangulo ingresado es equilatero");
             }
-            else if ( (lado1 == lado2 && lado1 != lado3) || (lado1 == lado3 && lado1 != lado2) || (lado2 == lado3 && lado1 != lado2))
+            else if ((lado1 == lado2 && lado1 != lado3) || (lado1 == lado3 && lado1 != lado2) || (lado2 == lado3 && lado1 != lado2))
             {
                 Console.WriteLine("El triangulo es isosceles");
             }
@@ -270,7 +273,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Ingrese el nombre del empleado {");
                 nombre = Console.ReadLine();
-                if ( nombre.Equals(""))
+                if (nombre.Equals(""))
                 {
                     Console.WriteLine("El nombre no puede quedar vacio");
                 }
@@ -280,7 +283,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Ingrese el jornal por hora");
                 jornalPorHora = Convert.ToDouble(Console.ReadLine());
-                if ( jornalPorHora == 0)
+                if (jornalPorHora == 0)
                 {
                     Console.WriteLine("Ingrese un valor mayor a 0");
                 }
@@ -290,7 +293,7 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("Ingrese las horas trabajadas");
                 horasTrabajadas = Convert.ToDouble(Console.ReadLine());
-                if ( horasTrabajadas == 0)
+                if (horasTrabajadas == 0)
                 {
                     Console.WriteLine("Ingrese un valor mayor a 0");
                 }
@@ -319,7 +322,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Ingrese numero de registro:");
                     registro = Console.ReadLine();
-                    if ( registro.Equals(""))
+                    if (registro.Equals(""))
                     {
                         Console.WriteLine("Debe ingresar un valor");
                     }
@@ -329,19 +332,19 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Ingrese una nota entre 0 y 10");
                     nota = Convert.ToInt32(Console.ReadLine());
-                    if ( nota < 0 || nota > 10)
+                    if (nota < 0 || nota > 10)
                     {
                         Console.WriteLine("La nota debe estar entre 0 y 10");
                     }
                 } while (nota < 0 || nota > 10);
 
-                if ( nota < notaMinima)
+                if (nota < notaMinima)
                 {
                     notaMinima = nota;
                     registroNotaMinima = registro;
                 }
 
-                if ( nota > notaMaxima)
+                if (nota > notaMaxima)
                 {
                     notaMaxima = nota;
                     registroNotaMaxima = registro;
@@ -351,7 +354,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Desea continuar? Ingrese S o N");
                     continuar = Console.ReadLine();
-                    if ( !continuar.Equals("S") && !continuar.Equals("N"))
+                    if (!continuar.Equals("S") && !continuar.Equals("N"))
                     {
                         Console.WriteLine("Ingrese S o N");
                     }
@@ -380,7 +383,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Ingrese numero de factura:");
                     numeroFactura = Console.ReadLine();
-                    if ( numeroFactura.Equals(""))
+                    if (numeroFactura.Equals(""))
                     {
                         Console.WriteLine("Debe ingresar un valor");
                     }
@@ -390,13 +393,13 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Ingrese una importe positivo para la factura");
                     importe = Convert.ToDouble(Console.ReadLine());
-                    if ( importe <= 0)
+                    if (importe <= 0)
                     {
                         Console.WriteLine("El importe debe ser positivo");
                     }
                 } while (importe <= 0);
 
-                if ( contador == 0)
+                if (contador == 0)
                 {
                     facturaMaxima = numeroFactura;
                     facturaMinima = numeroFactura;
@@ -405,13 +408,13 @@ namespace ConsoleApp1
                 }
                 else
                 {
-                    if ( importe < importeMinimo)
+                    if (importe < importeMinimo)
                     {
                         facturaMinima = numeroFactura;
                         importeMinimo = importe;
                     }
 
-                    if ( importe > importeMaximo)
+                    if (importe > importeMaximo)
                     {
                         facturaMaxima = numeroFactura;
                         importeMaximo = importe;
@@ -424,7 +427,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Desea continuar? Ingrese S o N");
                     continuar = Console.ReadLine();
-                    if ( !continuar.Equals("S") && !continuar.Equals("N"))
+                    if (!continuar.Equals("S") && !continuar.Equals("N"))
                     {
                         Console.WriteLine("Ingrese S o N");
                     }
@@ -469,7 +472,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Ingrese codigo de articulo:");
                     codigoArticulo = Console.ReadLine();
-                    if ( codigoArticulo.Equals(""))
+                    if (codigoArticulo.Equals(""))
                     {
                         Console.WriteLine("Debe ingresar un valor");
                     }
@@ -479,7 +482,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Ingrese nombre de articulo:");
                     nombreArticulo = Console.ReadLine();
-                    if ( nombreArticulo.Equals(""))
+                    if (nombreArticulo.Equals(""))
                     {
                         Console.WriteLine("Debe ingresar un valor");
                     }
@@ -490,7 +493,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Ingrese un importe positivo para el costo de materia prima");
                     costoMateriaPrima = Convert.ToDouble(Console.ReadLine());
-                    if ( costoMateriaPrima <= 0)
+                    if (costoMateriaPrima <= 0)
                     {
                         Console.WriteLine("El importe debe ser positivo");
                     }
@@ -500,7 +503,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Ingrese un valor positivo para la cantidad de gramos");
                     cantidadGramos = Convert.ToDouble(Console.ReadLine());
-                    if ( cantidadGramos <= 0)
+                    if (cantidadGramos <= 0)
                     {
                         Console.WriteLine("La cantidad debe ser positiva");
                     }
@@ -510,7 +513,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Ingrese un valor para el porcentaje de indirectos");
                     porcentajeIndirectos = Convert.ToDouble(Console.ReadLine());
-                    if ( porcentajeIndirectos <= 0 || porcentajeIndirectos > 100)
+                    if (porcentajeIndirectos <= 0 || porcentajeIndirectos > 100)
                     {
                         Console.WriteLine("El valor debe ser positivo y estar entre 0 y 100");
                     }
@@ -520,7 +523,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Ingrese un valor para el porcentaje de rentabilidad");
                     porcentajeRentabilidad = Convert.ToDouble(Console.ReadLine());
-                    if ( porcentajeRentabilidad <= 0 || porcentajeRentabilidad > 100)
+                    if (porcentajeRentabilidad <= 0 || porcentajeRentabilidad > 100)
                     {
                         Console.WriteLine("El valor debe ser positivo y estar entre 0 y 100");
                     }
@@ -530,7 +533,7 @@ namespace ConsoleApp1
                 precio = costo * ((porcentajeRentabilidad / 100) + 1) * (1 + kdTasaIva);
                 rentabilidad = precio - costo;
 
-                if ( contador == 0)
+                if (contador == 0)
                 {
                     precioMaximo = precio;
                     nombreArticuloMasCaro = nombreArticulo;
@@ -546,19 +549,19 @@ namespace ConsoleApp1
                 }
                 else
                 {
-                    if ( precio > precioMaximo)
+                    if (precio > precioMaximo)
                     {
                         precioMaximo = precio;
                         nombreArticuloMasCaro = nombreArticulo;
                         articuloMasCaro = codigoArticulo;
                     }
-                    if ( precio < precioMinimo)
+                    if (precio < precioMinimo)
                     {
                         precioMinimo = precio;
                         nombreArticuloMasBarato = nombreArticulo;
                         articuloMasBarato = codigoArticulo;
                     }
-                    if ( rentabilidad > rentabilidadMaxima)
+                    if (rentabilidad > rentabilidadMaxima)
                     {
                         rentabilidadMaxima = rentabilidad;
                         nombreArticuloMasRentable = nombreArticulo;
@@ -571,7 +574,7 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Desea continuar? Ingrese S o N");
                     continuar = Console.ReadLine();
-                    if ( !continuar.Equals("S") && !continuar.Equals("N"))
+                    if (!continuar.Equals("S") && !continuar.Equals("N"))
                     {
                         Console.WriteLine("Ingrese S o N");
                     }
@@ -614,16 +617,19 @@ namespace ConsoleApp1
             int Cont = 0;
 
 
-            do {
+            do
+            {
                 Cont = Cont + 1;
-                do {
+                do
+                {
                     Console.WriteLine("Seleccione el sistema:");
                     Console.WriteLine("1. Ventas");
                     Console.WriteLine("2. Sueldo {s");
                     Console.WriteLine("3. Contabilidad");
                     Console.WriteLine("4. Consultas Gerenciales");
                     OpcionSist = Convert.ToInt32(Console.ReadLine());
-                    if ( OpcionSist < 1 || OpcionSist > 4) {
+                    if (OpcionSist < 1 || OpcionSist > 4)
+                    {
                         Console.WriteLine("Debe ingresar una opción válida");
                     }
                 } while (OpcionSist < 1 && OpcionSist > 4);
@@ -699,46 +705,117 @@ namespace ConsoleApp1
                         }
                     } while (!Continuar.Equals("S") && !Continuar.Equals("N"));
                 } while (Continuar.Equals("S"));
-        //Carga el precio del sistema al total de sistemas
-        PrecioTot = PrecioTot + PrecioSist;
-        //Muestra el precio del sistema
-        Console.WriteLine("El precio del sistema " + NombreSist + " es: $" + PrecioSist);
-        //En la primera pasada, el unico sistema es el que mas dejo
-        //y el que menos dejo al mismo tiempo.
-        if ( Cont == 1 ) {
-            GciaMin = PrecioSist - CostoSist;
-            GciaMax = PrecioSist - CostoSist;
-            SistMax = NombreSist;
-            SistMin = NombreSist;
-        } else { 
-            //En la segunda pasada, comparo con el dato inicial.
-            //Rentabilidad máxima
-            if ((PrecioSist - CostoSist) > GciaMax ) {
-               GciaMax = PrecioSist - CostoSist;
-                SistMax = NombreSist;
-            }
-            //Rentabilidad mínima
-            if ((PrecioSist - CostoSist) < GciaMin ) {
-               GciaMin = PrecioSist - CostoSist;
-                SistMin = NombreSist;
-            }
-        }
-
-
-            //Pregunta si se desea cargar otro sistema
-            do {
-                Console.WriteLine("¿Desea cargar otro sistema? S/N");
-                Continuar = Console.ReadLine().ToUpper();
-                if (!Continuar.Equals("S") && !Continuar.Equals("N")) {
-                    Console.WriteLine("Debe ingresar S o N");
+                //Carga el precio del sistema al total de sistemas
+                PrecioTot = PrecioTot + PrecioSist;
+                //Muestra el precio del sistema
+                Console.WriteLine("El precio del sistema " + NombreSist + " es: $" + PrecioSist);
+                //En la primera pasada, el unico sistema es el que mas dejo
+                //y el que menos dejo al mismo tiempo.
+                if (Cont == 1)
+                {
+                    GciaMin = PrecioSist - CostoSist;
+                    GciaMax = PrecioSist - CostoSist;
+                    SistMax = NombreSist;
+                    SistMin = NombreSist;
                 }
-            } while (!Continuar.Equals("S") && !Continuar.Equals("N"));
-        } while (Continuar.Equals("S"));
+                else
+                {
+                    //En la segunda pasada, comparo con el dato inicial.
+                    //Rentabilidad máxima
+                    if ((PrecioSist - CostoSist) > GciaMax)
+                    {
+                        GciaMax = PrecioSist - CostoSist;
+                        SistMax = NombreSist;
+                    }
+                    //Rentabilidad mínima
+                    if ((PrecioSist - CostoSist) < GciaMin)
+                    {
+                        GciaMin = PrecioSist - CostoSist;
+                        SistMin = NombreSist;
+                    }
+                }
+
+
+                //Pregunta si se desea cargar otro sistema
+                do
+                {
+                    Console.WriteLine("¿Desea cargar otro sistema? S/N");
+                    Continuar = Console.ReadLine().ToUpper();
+                    if (!Continuar.Equals("S") && !Continuar.Equals("N"))
+                    {
+                        Console.WriteLine("Debe ingresar S o N");
+                    }
+                } while (!Continuar.Equals("S") && !Continuar.Equals("N"));
+            } while (Continuar.Equals("S"));
             //Calcula y muestra el promedio
             Console.WriteLine("El precio promedio de los sistemas es: " + (PrecioTot / Cont));
             //Calcula y muestra los sistemas con mayor y menor ganancia
             Console.WriteLine("El sistema con mayor ganancia es: " + SistMax + " ($ " + GciaMax + ")");
             Console.WriteLine("El sistema con menor ganancia es: " + SistMin + " ($ " + GciaMin + ")");
         }
+
+
+        private static void ejercicio14()
+        {
+            int Opcion = 0;
+            String Opcion2 = "";
+            int Variable = 0;
+            do
+            {
+
+                do
+                {
+                    Console.WriteLine("Ingrese una opción: ");
+                    Console.WriteLine("1 - Establecer valor");
+                    Console.WriteLine("2 - Visualizar valor actual");
+                    Console.WriteLine("3 - Realizar una operación");
+                    Console.WriteLine("4 - Salir");
+                    Opcion = Convert.ToInt32(Console.ReadLine());
+                    if (Opcion != 1 && Opcion != 2 && Opcion != 3 && Opcion != 4)
+                    {
+                        Console.WriteLine("Opción Incorrecta."); ;
+                    }
+                } while (Opcion != 1 && Opcion != 2 && Opcion != 3 && Opcion != 4);
+
+                switch (Opcion)
+                {
+                    case 1:
+                        Console.WriteLine("Ingrese un valor.");
+                        Variable = Convert.ToInt32(Console.ReadLine());
+                        break;
+                    case 2:
+                        Console.WriteLine("Valor actual: " + Variable);
+                        break;
+                    case 3:
+                        do
+                        {
+                            do
+                            {
+                                Console.WriteLine("Ingrese una opción: ");
+                                Console.WriteLine("S - Sumar 1");
+                                Console.WriteLine("R - Restar 1");
+                                Console.WriteLine("V - Volver al menú principal");
+                                Opcion2 = Console.ReadLine().ToUpper();
+                                if (!Opcion2.Equals("S") && !Opcion2.Equals("R") && !Opcion2.Equals("V"))
+                                {
+                                    Console.WriteLine("Opcion incorrecta."); ;
+                                }
+                            } while (!Opcion2.Equals("S") && !Opcion2.Equals("R") && !Opcion2.Equals("V"));
+                            switch (Opcion2)
+                            {
+                                case "S":
+                                    Variable = Variable + 1;
+                                    break;
+                                case "R":
+                                    Variable = Variable - 1;
+                                    break;
+                            }
+                        } while (!Opcion2.Equals("V"));
+                        break;
+                }
+            } while (Opcion != 4);
+        }
+
+
     }
 }
